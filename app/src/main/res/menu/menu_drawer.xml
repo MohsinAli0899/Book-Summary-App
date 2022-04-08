@@ -2,14 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/dashboard"
-        android:title="@string/dashboard" />
+        android:title="@string/dashboard"
+        android:icon="@drawable/ic_dashboard"/>
     <item
         android:id="@+id/favourites"
-        android:title="@string/Favourites" />
+        android:title="@string/Favourites"
+        android:icon="@drawable/ic_favourites"/>
     <item
         android:id="@+id/profile"
-        android:title="@string/profile" />
+        android:title="@string/profile"
+        android:icon="@drawable/ic_profile"/>
     <item
         android:id="@+id/aboutApp"
-        android:title="@string/about_app" />
+        android:title="@string/about_app"
+        android:icon="@drawable/ic_about_app"/>
 </menu>
