@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.MenuItem
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -34,7 +35,26 @@ class MainActivity : AppCompatActivity() {
         val actionBarDrawerToggle = ActionBarDrawerToggle(
             this@MainActivity, drawerLayout, R.string.open_drawer, R.string.close_drawer)
         drawerLayout.addDrawerListener(actionBarDrawerToggle)       //setting up hamburger icon
-        actionBarDrawerToggle.syncState()               //syncing opening closing state
+        actionBarDrawerToggle.syncState() //syncing opening closing state
+
+        //Adding onclick listeners on Menu Items in Navigation Drawer
+        navigationView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.dashboard ->{
+                    Toast.makeText(this@MainActivity, "Clicked on Dashboard", Toast.LENGTH_SHORT).show()
+                }
+                R.id.favourites ->{
+                    Toast.makeText(this@MainActivity, "Clicked on Favourites", Toast.LENGTH_SHORT).show()
+                }
+                R.id.profile ->{
+                    Toast.makeText(this@MainActivity, "Clicked on Profile", Toast.LENGTH_SHORT).show()
+                }
+                R.id.aboutApp ->{
+                    Toast.makeText(this@MainActivity, "Clicked on About App", Toast.LENGTH_SHORT).show()
+                }
+            }
+            return@setNavigationItemSelectedListener true
+        }
     }
 fun setUpToolbar(){
     setSupportActionBar(toolbar)
