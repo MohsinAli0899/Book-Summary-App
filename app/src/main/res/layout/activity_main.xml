@@ -15,7 +15,8 @@
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:minHeight="?attr/actionBarSize"
-     android:background="@color/teal_700"/>
+     android:background="@color/teal_700"
+     android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
     <FrameLayout
         android:id="@+id/frame"
         android:layout_width="fill_parent"
@@ -29,6 +30,6 @@
         android:layout_height="match_parent"
         app:headerLayout="@layout/drawer_header"
         app:menu="@menu/menu_drawer"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
