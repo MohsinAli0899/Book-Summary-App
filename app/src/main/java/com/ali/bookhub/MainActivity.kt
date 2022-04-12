@@ -41,18 +41,32 @@ class MainActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.dashboard ->{
-                    supportFragmentManager.beginTransaction().replace(R.id.frame, DashboardFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame, DashboardFragment())
+                        .addToBackStack("Dashboard")
+                        .commit()
 
                     drawerLayout.closeDrawers()
                 }
                 R.id.favourites ->{
-                    Toast.makeText(this@MainActivity, "Clicked on Favourites", Toast.LENGTH_SHORT).show()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame, FavouritesFragment())
+                        .addToBackStack("Favourites")
+                        .commit()
+
+                    drawerLayout.closeDrawers()
                 }
                 R.id.profile ->{
-                    Toast.makeText(this@MainActivity, "Clicked on Profile", Toast.LENGTH_SHORT).show()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame, ProfileFragment())
+                        .addToBackStack("Profile")
+                        .commit()
+
+                    drawerLayout.closeDrawers()
                 }
                 R.id.aboutApp ->{
-                    Toast.makeText(this@MainActivity, "Clicked on About App", Toast.LENGTH_SHORT).show()
+                    supportFragmentManager.beginTransaction().replace(R.id.frame, AboutAppFragment())
+                        .addToBackStack("About App")
+                        .commit()
+
+                    drawerLayout.closeDrawers()
                 }
             }
             return@setNavigationItemSelectedListener true

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class DashboardFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -14,8 +14,6 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 }
