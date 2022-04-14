@@ -11,7 +11,7 @@ import java.util.ArrayList
 
 class DashboardRecyclerAdapter(val context: Context, val itemList:ArrayList<String>): RecyclerView.Adapter<DashboardRecyclerAdapter.DashboardViewHolder>() {
     class DashboardViewHolder(view:View) : RecyclerView.ViewHolder(view){
-        val textView: TextView = view.findViewById(R.id.txtRecyclerRowItem)
+        val textView: TextView = view.findViewById(R.id.txtBookName)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
