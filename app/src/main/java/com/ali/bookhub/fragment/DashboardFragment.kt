@@ -1,23 +1,29 @@
 package com.ali.bookhub.fragment
 
+import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ali.bookhub.R
 import com.ali.bookhub.adapter.DashboardRecyclerAdapter
 import com.ali.bookhub.model.Book
+import com.ali.bookhub.util.ConnectionManager
+import org.w3c.dom.Text
 
 class DashboardFragment : Fragment() {
 
 lateinit var recyclerDashboard: RecyclerView
 
 lateinit var layoutManager: RecyclerView.LayoutManager
+
+lateinit var btnCheckInternet: Button
 
 val bookList = arrayListOf<String>(
     "P.S I Love You",
@@ -54,6 +60,38 @@ val bookList = arrayListOf<String>(
 
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
         recyclerDashboard = view.findViewById(R.id.recyclerDashboard)
+
+        btnCheckInternet = view.findViewById(R.id.btnCheckInternet)
+        btnCheckInternet.setOnClickListener {
+            if (ConnectionManager().checkConnectivity(activity as Context)){
+                //Internet is available
+                val dialog = AlertDialog.Builder(activity as Context)
+                dialog.setTitle("Success")
+                dialog.setMessage("Internet Connection Found")
+                dialog.setPositiveButton("Ok"){ text , listener ->
+                //Do Nothing
+                }
+                dialog.setNegativeButton("Cancel"){text, listener ->
+                    //Do Nothing
+                }
+                dialog.create()
+                dialog.show()
+            }
+            else{
+                //Internet is not available
+                val dialog = AlertDialog.Builder(activity as Context)
+                dialog.setTitle("Error")
+                dialog.setMessage("Internet Connection Not Found")
+                dialog.setPositiveButton("Ok"){ text , listener ->
+                    //Do Nothing
+                }
+                dialog.setNegativeButton("Cancel"){text, listener ->
+                    //Do Nothing
+                }
+                dialog.create()
+                dialog.show()
+            }
+        }
 
         layoutManager = LinearLayoutManager(activity)
 
