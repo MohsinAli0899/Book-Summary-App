@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.textclassifier.TextClassification
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +17,10 @@ import com.ali.bookhub.R
 import com.ali.bookhub.adapter.DashboardRecyclerAdapter
 import com.ali.bookhub.model.Book
 import com.ali.bookhub.util.ConnectionManager
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import org.w3c.dom.Text
 
 class DashboardFragment : Fragment() {
@@ -25,21 +31,10 @@ lateinit var layoutManager: RecyclerView.LayoutManager
 
 lateinit var btnCheckInternet: Button
 
-val bookList = arrayListOf<String>(
-    "P.S I Love You",
-    "The Great Gatsby",
-    "Anna Karenina",
-    "Madame Bovary",
-    "War and Peace",
-    "Lolita",
-    "Middlemarch",
-    "The Adventures of Huckleberry Finn",
-    "Moby-Dick",
-    "The Lord of the Rings")
-
     lateinit var recyclerAdapter: DashboardRecyclerAdapter
+     val bookInfoList = arrayListOf<Book>()
 
-    val bookInfoList = arrayListOf<Book>(
+   /* val bookInfoList = arrayListOf<Book>(
         Book("P.S I Love You", "Cecilia Ahern", "Rs. 299", "4.5", R.drawable.ps_ily),
         Book("The Great Gatsby", "F. Scott Fitzgerald", "Rs. 399", "4.1", R.drawable.great_gatsby),
         Book("Anna Karenina", "Leo Tolstoy", "Rs. 199", "4.3", R.drawable.anna_kare),
@@ -50,7 +45,7 @@ val bookList = arrayListOf<String>(
         Book("The Adventures of Huckleberry Finn", "Mark Twain", "Rs. 699", "4.5", R.drawable.adventures_finn),
         Book("Moby-Dick", "Herman Melville", "Rs. 499", "4.5", R.drawable.moby_dick),
         Book("The Lord of the Rings", "J.R.R Tolkien", "Rs. 749", "5.0", R.drawable.lord_of_rings),
-        )
+        )*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -95,16 +90,55 @@ val bookList = arrayListOf<String>(
 
         layoutManager = LinearLayoutManager(activity)
 
-        recyclerAdapter = DashboardRecyclerAdapter(activity as Context, bookInfoList)
 
-        recyclerDashboard.adapter = recyclerAdapter
+        val queue = Volley.newRequestQueue(activity as Context)
+        val url = "http://13.235.250.119/v1/book/fetch_books/"
+        val jsonObjectRequest = object: JsonObjectRequest(Request.Method.GET,url,null,Response.Listener {
+        // Here we will handle the response
+        val success = it.getBoolean("success")
+            if (success){
+                val data = it.getJSONArray("data")
+                for (i in 0 until data.length()){
+                    val bookJsonObject = data.getJSONObject(i)
+                    val bookObject = Book(
+                        bookJsonObject.getString("book_id"),
+                        bookJsonObject.getString("name"),
+                        bookJsonObject.getString("author"),
+                        bookJsonObject.getString("rating"),
+                        bookJsonObject.getString("price"),
+                        bookJsonObject.getString("image")
+                    )
+                    bookInfoList.add(bookObject)
+                    recyclerAdapter = DashboardRecyclerAdapter(activity as Context, bookInfoList)
 
-        recyclerDashboard.layoutManager = layoutManager
+                    recyclerDashboard.adapter = recyclerAdapter
 
-        recyclerDashboard.addItemDecoration(
-            DividerItemDecoration(recyclerDashboard.context,
-                (layoutManager as LinearLayoutManager).orientation))
+                    recyclerDashboard.layoutManager = layoutManager
 
+                    recyclerDashboard.addItemDecoration(
+                        DividerItemDecoration(recyclerDashboard.context,
+                            (layoutManager as LinearLayoutManager).orientation
+                        )
+                    )
+                }
+            }
+            else{
+                Toast.makeText(activity as Context, "Some Error Ocurred", Toast.LENGTH_SHORT).show()
+            }
+
+        },Response.ErrorListener {
+        //Here we will handle the errors
+            println("Error is $it")
+        }){
+            override fun getHeaders(): MutableMap<String, String> {
+                val headers = HashMap<String , String>()
+                headers["Content-type"] = "application/json"
+                headers["token"] = "9bf534118365f1"
+                return headers
+            }
+        }
+
+        queue.add(jsonObjectRequest)
         return view
     }
 }
