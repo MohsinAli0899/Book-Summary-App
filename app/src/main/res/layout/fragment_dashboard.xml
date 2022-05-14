@@ -14,14 +14,16 @@
         android:padding="10dp"
         android:layout_margin="5dp"/>
 
-    <Button
-        android:id="@+id/btnCheckInternet"
+    <RelativeLayout
+        android:id="@+id/progressLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/purple_700"
-        android:text="@string/check_internet"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:textColor="#ffffff"/>
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
 </RelativeLayout>
