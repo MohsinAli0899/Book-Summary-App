@@ -18,6 +18,8 @@ class DescriptionActivity : AppCompatActivity() {
     lateinit var progressBar: ProgressBar
     lateinit var progressLayout: RelativeLayout
 
+    var bookId: String? = "100"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_description)
@@ -33,6 +35,18 @@ class DescriptionActivity : AppCompatActivity() {
         progressBar.visibility = View.VISIBLE
         progressLayout = findViewById(R.id.progressLayout)
         progressLayout.visibility = View.VISIBLE
+
+        if (intent!=null){
+            bookId = intent.getStringExtra("book_id")
+        }
+        else{
+            finish()
+            Toast.makeText(this@DescriptionActivity, "Some unexpected error occurred", Toast.LENGTH_SHORT).show()
+        }
+        if (bookId=="100"){
+            finish()
+            Toast.makeText(this@DescriptionActivity, "Some unexpected error occurred", Toast.LENGTH_SHORT).show()
+        }
     }
 
 }
