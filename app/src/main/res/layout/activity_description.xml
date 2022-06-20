@@ -4,22 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".activity.DescriptionActivity">
+    tools:context=".activity.DescriptionActivity"
+    android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
         android:minHeight="?attr/actionBarSize"
-        android:background="@color/teal_700"
+        android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
 
-    <ScrollView
+
+     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/toolbar">
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,9 +38,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
-                    android:src="@mipmap/ic_launcher"
+                    android:padding="5dp"
                     android:scaleType="centerCrop"
-                    android:padding="5dp"/>
+                    android:src="@mipmap/ic_launcher" />
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -50,38 +51,39 @@
                         android:id="@+id/txtBookName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name of the Book"
                         android:padding="8dp"
+                        android:text="name of the book is :"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#000000"/>
+                        android:textStyle="bold" />
+
 
                     <TextView
                         android:id="@+id/txtBookAuthor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name of the Author"
-                        android:layout_below="@id/txtBookName"
+                        android:layout_below="@+id/txtBookName"
                         android:padding="8dp"
-                        android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:text="name of the Author:"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/txtBookPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rs. 299"
-                        android:layout_below="@id/txtBookAuthor"
+                        android:layout_below="@+id/txtBookAuthor"
                         android:padding="8dp"
-                        android:textSize="15sp"
+                        android:text="rs: 329802"
                         android:textColor="#357a38"
+                        android:textSize="15sp"
                         android:textStyle="bold"/>
                 </RelativeLayout>
 
                 <TextView
                     android:id="@+id/txtBookRating"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1.2"
                     android:padding="4dp"
                     android:textSize="18sp"
@@ -89,57 +91,57 @@
                     android:textColor="#ffc828"
                     android:text="4.5"
                     android:drawableLeft="@drawable/ic_rating"
-                    android:drawablePadding="4dp"/>
-
+                    android:drawablePadding="4dp" />
             </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/llContent">
+                android:layout_below="@+id/llContent">
 
                 <TextView
-                    android:id="@+id/txtAboutTheBookStatic"
+                    android:id="@id/txtAboutTheBookStatic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:padding="6dp"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
                     android:layout_marginTop="4dp"
-                    android:text="About the Book: "/>
+                    android:padding="6dp"
+                    android:text="About the book"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtBookDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtAboutTheBookStatic"
+                    android:layout_margin="10dp"
                     android:padding="6dp"
-                    android:layout_below="@id/txtAboutTheBookStatic"
-                    android:textSize="18sp"
-                    android:text="@string/hello_blank_fragment"
-                    android:textColor="#000000"
-                    android:layout_margin="10dp"/>
+                    android:text="hjaslpjwopiejhapo"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
             </RelativeLayout>
 
         </RelativeLayout>
 
+
     </ScrollView>
+
     <Button
         android:id="@+id/btnAddToFav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/teal_700"
-        android:text="@string/add_to_favourites"
-        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:text="Add To Favourite"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="19sp"
-        android:textAllCaps="false"/>
-
+        android:textSize="14sp"/>
     <RelativeLayout
         android:id="@+id/progressLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="gone"
         android:background="@color/white">
 
         <ProgressBar
@@ -150,3 +152,8 @@
 
     </RelativeLayout>
 </RelativeLayout>
+
+
+
+
+

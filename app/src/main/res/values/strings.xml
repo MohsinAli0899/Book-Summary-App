@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">BookHub</string>
     <string name="dashboard">Dashboard</string>
-    <string name="Favourites">Favourites</string>
+    <string name="favourites">Favourites</string>
     <string name="profile">Profile</string>
     <string name="about_app">About App</string>
     <string name="navigation_drawer">Navigation Drawer</string>
@@ -10,9 +10,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="dashboard_fragment">Dashboard Fragment</string>
-    <string name="favorites_fragment">Favourites Fragment</string>
-    <string name="profile_fragment">Profile Fragment</string>
-    <string name="about_app_fragment">About App Fragment</string>
-    <string name="check_internet">Check Internet</string>
-    <string name="add_to_favourites">Add to Favourites</string>
+    <string name="favourites_fragment">Favourite fragment</string>
+    <string name="profile_fragment">Profile </string>
+    <string name="about_app_fragment">About App Fragement</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="preference_file">Preference file</string>
+    <string name="Email">email</string>
+    <string name="PhoneNumber">" Phone Number"</string>
+    <string name="address">Address</string>
+    <string name="save">SAVE</string>
+    <string name="action_sort">Sort</string>
+    <string name="about_app_bookhub">BookHub is an Android application that helps users to view books and add them to favorites. A simple Android app developed in Kotlin that fetches data from the internet has a navigation drawer and demonstrates the use of fragments and activities. Users can also see the book\'s description. Users can view, and read the book’s description.</string>
 </resources>

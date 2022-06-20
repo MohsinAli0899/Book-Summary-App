@@ -3,18 +3,34 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/drawable/ic_rating.xml" value="0.2265" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/activity_description.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/drawer_header.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_about_app.xml" value="0.264" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_favourites.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/layout_dashnoard_single_row.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/layout/recycler_dashboard_single_row.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/menu/menu_drawer.xml" value="0.23645833333333333" />
-        <entry key="..\:/Users/mohsi/AndroidStudioProjects/BookHub/app/src/main/res/xml/network_security_config.xml" value="0.23645833333333333" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/drawable-anydpi/ic_rating.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/drawable/ic_baseline_sort_24.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/activity_description.xml" value="0.18981481481481483" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/drawer_header.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/drawer_hearder.xml" value="0.2" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_about_app.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_favourites.xml" value="0.12284701114488349" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/n.xml" value="0.12284701114488349" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/recycler_dashboard_single_row.xml" value="0.1" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/layout/recycler_favorite_single_row.xml" value="0.4" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/menu/h.xml" value="0.22777777777777777" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/menu/menu_dashboard.xml" value="0.4" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/menu/menu_drawer.xml" value="0.2" />
+        <entry key="..\:/ANDROIDSTDIO/AndroidStudioProjects/BookHub/app/src/main/res/xml/network_security_config.xml" value="0.10740740740740741" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/activity_description.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/activity_main.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/drawer_header.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/fragment_about_app.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/fragment_dashboard.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/fragment_favourites.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/fragment_profile.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/recycler_dashboard_single_row.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/layout/recycler_favourite_single_row.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Desktop/Book-Hub-master/app/src/main/res/menu/menu_drawer.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/mohsi/Documents/GitHub/BookHub/app/src/main/res/layout/fragment_about_app.xml" value="0.23645833333333333" />
       </map>
     </option>
   </component>
